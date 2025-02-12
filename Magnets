@@ -1,0 +1,19 @@
+def count_magnet_groups():
+   
+    n = int(input().strip())
+    
+   
+    previous_magnet = input().strip()
+    groups = 1  # Start with one group
+    
+   
+    for _ in range(1, n):
+        current_magnet = input().strip()
+        if current_magnet != previous_magnet:
+            groups += 1  # Increment group count if orientation changes
+        previous_magnet = current_magnet  # Update previous magnet
+    
+    print(groups)  # Output the total number of groups
+
+
+count_magnet_groups()
