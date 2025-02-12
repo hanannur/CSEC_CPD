@@ -1,0 +1,23 @@
+def min_rotations_to_print(s):
+   
+    current_position = ord('a')  # ASCII value of 'a'
+    total_rotations = 0
+    
+    for char in s:
+        target_position = ord(char)  
+        
+        clockwise_distance = (target_position - current_position) % 26
+        counterclockwise_distance = (current_position - target_position) % 26
+        
+        
+        total_rotations += min(clockwise_distance, counterclockwise_distance)
+        
+        
+        current_position = target_position
+    
+    return total_rotations
+ 
+ 
+exhibit_name = input().strip()
+ 
+print(min_rotations_to_print(exhibit_name))
