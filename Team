@@ -1,0 +1,24 @@
+def count_problems_to_solve():
+   
+    n = int(input().strip())
+    
+   
+    count = 0
+    
+   
+    for _ in range(n):
+        # Read the confidence levels for the current problem
+        responses = list(map(int, input().strip().split()))
+        
+        
+        confident_count = sum(responses)
+        
+        
+        if confident_count >= 2:
+            count += 1  # Increment the counter
+    
+   
+    print(count)
+
+
+count_problems_to_solve()
