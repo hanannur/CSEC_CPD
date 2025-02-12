@@ -1,0 +1,16 @@
+def minimum_road_width():
+    n, h = map(int, input().split())
+    heights = list(map(int, input().split()))
+    
+    total_width = 0
+    
+    
+    for height in heights:
+        if height > h:
+            total_width += 2  # Bending down
+        else:
+            total_width += 1  # Walking normally
+    
+    
+    print(total_width)
+minimum_road_width()
