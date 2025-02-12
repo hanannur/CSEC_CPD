@@ -1,0 +1,17 @@
+# Read input values
+a1, a2, a3, a4 = map(int, input().split())
+s = input().strip()
+
+# Create a list of calories corresponding to each strip
+calories = [0, a1, a2, a3, a4]  # index 0 is unused for convenience
+
+# Initialize total calories
+total_calories = 0
+
+# Calculate total calories based on the string s
+for char in s:
+    strip_number = int(char)  # Convert character to integer (1-4)
+    total_calories += calories[strip_number]  # Add corresponding calories
+
+# Print the total calories
+print(total_calories)
