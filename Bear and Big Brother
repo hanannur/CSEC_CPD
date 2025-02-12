@@ -1,0 +1,16 @@
+def bear_and_big_brother():
+    
+    a, b = map(int, input().strip().split())
+    
+    years = 0  # Initialize year counter
+    
+    
+    while a <= b:
+        a *= 3  # Limak's weight triples
+        b *= 2  # Bob's weight doubles
+        years += 1  # Increment the year counter
+    
+    print(years)  # Output the number of years
+
+
+bear_and_big_brother()
